@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For You Zahrotiy 🤍</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Caveat:wght@600;700&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,400;1,600&family=Scheherazade+New:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+  <!-- Background Canvas — floating crescents & stars -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Decorative Islamic geometric patterns (SVG overlays) -->
+  <div class="islamic-pattern-top"></div>
+  <div class="islamic-pattern-bottom"></div>
+
+  <!-- Audio -->
+  <div class="music-toggle" id="musicToggle" title="Nasheeda yoqish / o'chirish">
+    <span class="music-icon">🕌</span>
+    <span class="music-label">Nasheeda</span>
+  </div>
+  <audio id="bgMusic" loop preload="auto">
+    <!-- Inna fil Jannati nasheed -->
+    <source src="music/inna-fil-jannati.mp3" type="audio/mpeg">
+    <source src="music/romantic.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- ═══════════════════════════════════════════════
+       INTRO OVERLAY — Bismillah Ochilish
+  ═══════════════════════════════════════════════ -->
+  <div class="intro-overlay" id="introOverlay">
+    <div class="intro-card">
+      <div class="bismillah-arabic">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</div>
+      <div class="intro-sparkle">☪️ ✨ 🤍</div>
+      <h2 class="intro-subtitle">Alloh rizosi yo'lida — mehr va duo bilan</h2>
+      <h1 class="intro-title">Zahrotiyyim 🤍</h1>
+      <p class="intro-hint">Bu sahifa Alloh uchun bo'lgan sevgi va samimiy duolar bilan to'ldirildi...</p>
+      <button class="open-gift-btn" id="openGiftBtn">
+        <span>Sovg'ani ochish 🎁</span>
+      </button>
+      <p class="intro-dua">اللّهمّ بارك • Allohim baraka ber</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════
+       MAIN CONTENT
+  ═══════════════════════════════════════════════ -->
+  <main class="page-container" id="mainContent">
+
+    <!-- HERO SECTION -->
+    <header class="hero-section">
+      <div class="quran-verse-top glass-card">
+        <p class="arabic-text">وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً</p>
+        <p class="verse-translation">«Uning belgilaridan biri — sizlar uchun o'zingizdan juftlar yaratdi, ularga ko'ngil qo'ying va orangizga muhabbat va rahm-shafqat qo'ydi.»</p>
+        <p class="verse-ref">— Rum surasi, 21-oyat</p>
+      </div>
+
+      <div class="floating-badge">14-Oktabr • Muborak Tug'ilgan Kun</div>
+
+      <h1 class="hero-greeting" id="heroGreeting">
+        Tug'ilgan kuning bilan <span class="highlight-name">Zahrotiyyim 🤍</span>
+      </h1>
+
+      <p class="hero-tagline">
+        «Seni Alloh uchun sevaman — bu sevgi eng pok, eng samimiy va eng abadiy sevgidir...»
+      </p>
+
+      <div class="timer-box glass-card">
+        <div class="timer-title">☪️ Alloh bergan ne'mat: 6 yillik mehr va sadoqat</div>
+        <div class="timer-grid">
+          <div class="timer-item">
+            <span class="timer-number">6</span>
+            <span class="timer-label">Yil</span>
+          </div>
+          <div class="timer-item">
+            <span class="timer-number">2,192</span>
+            <span class="timer-label">Kun</span>
+          </div>
+          <div class="timer-item">
+            <span class="timer-number">52,608</span>
+            <span class="timer-label">Soat</span>
+          </div>
+          <div class="timer-item">
+            <span class="timer-number">∞</span>
+            <span class="timer-label">Abadiy Duo</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-down-hint">
+        <span>Pastga suring</span>
+        <div class="mouse-icon"></div>
+      </div>
+    </header>
+
+    <!-- ═══════════════════════════════════════════════
+         LOVE LETTER — Alloh uchun sevgi maktubi
+    ═══════════════════════════════════════════════ -->
+    <section class="letter-section">
+      <div class="glass-card letter-card">
+        <div class="wax-seal">☪️</div>
+        <h2 class="section-title">Alloh Uchun Bo'lgan Sevgi Maktubi</h2>
+        <div class="letter-body">
+          <p class="letter-para">
+            <strong>Bismillahir Rohmanir Rohim</strong>
+          </p>
+          <p class="letter-para">
+            <strong>Mening Zahrotiyyim — Alloh menga ato qilgan eng go'zal ne'mat 🤍</strong>
+          </p>
+          <p class="letter-para">
+            Bugun — 14-Oktabr — sen bu dunyoga kelgan muborak kun. Alloh taologa shukrlar bo'lsinki, 
+            bu olamga sening kabi pokiza, mehr-shafqatli va imonli bir inson yaratdi. 
+            Tug'ilgan kuning muborak bo'lsin, yagonam!
+          </p>
+
+          <div class="love-quote islamic-quote">
+            <span class="hadith-mark">☪️</span>
+            «Rasululloh ﷺ aytdilar: "Alloh uchun sevgan, Alloh uchun adovat qilgan kishi imonini komil qilgan."»
+            <span class="hadith-ref">— Abu Dovud rivoyati</span>
+          </div>
+
+          <p class="letter-para">
+            Men seni <strong>Alloh uchun sevaman</strong>, Zahrotiyyim. Bu sevgi — nafsning emas, 
+            ruhning, qalbning sevgisidir. 6 yildan beri qalbimda sening uchun faqat pokizalik, 
+            hurmat va cheksiz mehr bor. Seni sevishim — Allohning menga ko'rsatgan eng ulug' yo'lidir.
+          </p>
+          <p class="letter-para">
+            Sening birgina <em>tabassumingni</em> ko'rish uchun men har qanday narsaga tayyorman. 
+            Chunki sening quvonching — mening ibodat qilganimdek huzurimdir. 
+            Sening ko'zlaringdagi mehr — Alloh bergan eng chiroyli oyat kabi go'zaldir.
+          </p>
+          <p class="letter-para">
+            Sen — <strong>mening hayotim mazmuni</strong>san. Sensiz kunlar rangsiz, sensiz duolar 
+            yarim qolganday tuyuladi. Allohdan doimo so'rayman: «Yo Rabbiy, Zahroni menga nasib et, 
+            uni baxtli qil, ikkalamizni Jannatda ham birga qil.»
+          </p>
+          <p class="letter-para">
+            Rostini aytsam, bu dunyoda meni eng ko'p qo'rqitadigan narsa — <strong>seni yo'qotish</strong>dir. 
+            Bu qo'rquv shunchalik kuchli-ki, har duo qilganimda Allohdan seni muhofaza qilishni iltijo qilaman. 
+            Sen mening qalbimdagi eng qimmatli omontimsan, Zahrotiyyim.
+          </p>
+
+          <div class="love-quote islamic-quote">
+            <span class="hadith-mark">📖</span>
+            «Yo Alloh! Unga uzun umr ber, barakali hayot nasib qil, uni har barcha yomonlikdan asra va Jannatda meni u bilan birga qil. Omin!»
+          </div>
+
+          <p class="letter-closing">
+            Alloh seni doimo xursand qilsin, yuzingdan tabassum hech arimas! 🤍
+            <br><span class="signature">Seni Alloh uchun sevuvchi insoningdan ✨</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         PHOTO GALLERY — Rasmlar va Islomiy Statuslar
+    ═══════════════════════════════════════════════ -->
+    <section class="gallery-section">
+      <div class="section-header">
+        <span class="section-badge">☪️ Alloh Bergan Ne'matlar</span>
+        <h2 class="section-title">Har Bir Lahzangda Allohga Shukr</h2>
+        <p class="section-desc">Alloh seni go'zal qilib yaratdi — bu suratlar o'sha go'zallikning isboti...</p>
+      </div>
+
+      <div class="gallery-grid" id="galleryGrid">
+
+        <!-- Card 1 — Birga o'tirgan oq-qora rasm (stol boshida) -->
+        <div class="gallery-card glass-card">
+          <div class="card-image-wrap">
+            <img src="images/photo1.jpg" alt="Zahrotiyyim" />
+            <div class="image-overlay">
+              <span class="heart-pulse">☪️</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-tag">#AllohUchunSevgi</div>
+            <h3 class="card-caption">Birga Bo'lish — Allohning Rahmati</h3>
+            <p class="card-status">
+              "Alloh ikkalamizni bir-birimizga yo'ldosh qildi. Yoningda o'tirganimda — bu dunyoning eng tinch lahzalari. 
+              Seni Alloh uchun sevaman, chunki bu sevgi eng pokiza va eng samimiydir."
+            </p>
+            <div class="card-dua">
+              <span class="dua-arabic">رَبَّنَا هَبْ لَنَا مِنْ أَزْوَاجِنَا وَذُرِّيَّاتِنَا قُرَّةَ أَعْيُنٍ</span>
+              <span class="dua-meaning">Robbimiz, juftlarimizdan ko'z quvonchi ber</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 — Restoranda birga o'tirgan rasm -->
+        <div class="gallery-card glass-card">
+          <div class="card-image-wrap">
+            <img src="images/photo2.jpg" alt="Zahrotiyyim" />
+            <div class="image-overlay">
+              <span class="heart-pulse">🤍</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-tag">#HalolMuhabbat</div>
+            <h3 class="card-caption">Alloh Bergan Eng Go'zal Ne'mat</h3>
+            <p class="card-status">
+              "6 yil davomida har kuni Allohga shukr qilaman — senga o'xshagan pokiza, imonli va mehribon 
+              insonni hayotimga kiritgani uchun. Sening tabassumingda Allohning rahmati ko'rinadi."
+            </p>
+            <div class="card-dua">
+              <span class="dua-arabic">الحَمْدُ لِلَّهِ عَلَى كُلِّ حَالٍ</span>
+              <span class="dua-meaning">Har bir holatda Allohga hamd bo'lsin</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 — Darsda tabassum qilayotgan Zahro -->
+        <div class="gallery-card glass-card">
+          <div class="card-image-wrap">
+            <img src="images/photo3.jpg" alt="Zahrotiyyim" />
+            <div class="image-overlay">
+              <span class="heart-pulse">✨</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-tag">#ZahrotiyyimNurim</div>
+            <h3 class="card-caption">Ilm Yo'lidagi Malokim</h3>
+            <p class="card-status">
+              "Ilm o'rganayotgan lahzalaring — sening eng go'zal lahzalaring. Alloh sening ilmingga 
+              baraka bersin, yo'lingni nurlantirsin. Bu tabassumingni ko'rib, Yaratganga ming shukr aytaman. 
+              Seni yo'qotishdan qo'rqaman — chunki sen mening butun hayotim mazmuniisan."
+            </p>
+            <div class="card-dua">
+              <span class="dua-arabic">رَبِّ زِدْنِي عِلْمًا</span>
+              <span class="dua-meaning">Robbim, ilmimni ziyoda qil</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         DUO SANDIQCHASI — Tilaklar va Duolar
+    ═══════════════════════════════════════════════ -->
+    <section class="surprise-section">
+      <div class="glass-card surprise-box">
+        <h2 class="surprise-title">☪️ Zahrotiyyim Uchun Duolar Sandiqchasi</h2>
+        <p class="surprise-sub">Har bir tugma bosishda — chin qalbdan chiqqan duo va tilak:</p>
+        
+        <div class="wish-display" id="wishDisplay">
+          «Yo Alloh, Zahrotiyyimni har yomonlikdan asra va uni doimo baxtli qil! Omin 🤍»
+        </div>
+
+        <div class="btn-group">
+          <button class="action-btn wish-btn" id="newWishBtn">
+            Yangi duo olish 📿
+          </button>
+          <button class="action-btn confetti-btn" id="confettiBtn">
+            Tabriknoma otish 🎆
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         CLOSING QURAN VERSE
+    ═══════════════════════════════════════════════ -->
+    <section class="closing-verse">
+      <div class="glass-card verse-card">
+        <p class="arabic-text large-arabic">وَقُل رَّبِّ ارْحَمْهُمَا كَمَا رَبَّيَانِي صَغِيرًا</p>
+        <p class="verse-translation">«Rabbim, ularni (ota-onamni) shafqat bilan parvarish qilginki, ular meni bolaligimda tarbiya qilganlar.»</p>
+        <p class="verse-ref">— Isro surasi, 24-oyat</p>
+        <p class="closing-wish">Alloh seni doimo sog'-salomat saqlasn, yuzingdan tabassum arimas va barcha orzularing amalga oshsin. Omin! 🤍</p>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="page-footer">
+      <div class="footer-bismillah">بِسْمِ اللَّهِ</div>
+      <p class="footer-note">
+        Alloh rizosi uchun, <strong>Zahrotiyyim</strong>ga mehr va duo bilan yaratildi 🤍
+      </p>
+      <p class="footer-sub">14.10.2026 • ☪️ 6 yillik halol muhabbat ramzi</p>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
