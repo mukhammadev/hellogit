@@ -11,16 +11,16 @@
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </head>
 <body>
-  <!-- Background Canvas — floating crescents & stars -->
+  <!-- Background Canvas — floating stars & soft light -->
   <canvas id="bg-canvas"></canvas>
 
-  <!-- Decorative Islamic geometric patterns (SVG overlays) -->
+  <!-- Decorative geometric border lines -->
   <div class="islamic-pattern-top"></div>
   <div class="islamic-pattern-bottom"></div>
 
   <!-- Audio -->
   <div class="music-toggle" id="musicToggle" title="Nasheeda yoqish / o'chirish">
-    <span class="music-icon">🕌</span>
+    <span class="music-icon">🎵</span>
     <span class="music-label">Nasheeda</span>
   </div>
   <audio id="bgMusic" loop preload="auto">
@@ -31,16 +31,15 @@
   </audio>
 
   <!-- ═══════════════════════════════════════════════
-       INTRO OVERLAY — Bismillah Ochilish
+       INTRO OVERLAY — Ochilish
   ═══════════════════════════════════════════════ -->
   <div class="intro-overlay" id="introOverlay">
     <div class="intro-card">
       <div class="bismillah-arabic">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</div>
-      <div class="intro-sparkle">☪️ ✨ 🤍</div>
-      <h2 class="intro-subtitle">Alloh rizosi yo'lida — mehr va duo bilan</h2>
+      <div class="intro-sparkle">✨ 🤍 ✨</div>
       <h1 class="intro-title">Zahrotiyyim 🤍</h1>
-      <p class="intro-hint">Bu sahifa Alloh uchun bo'lgan sevgi va samimiy duolar bilan to'ldirildi...</p>
-      <button class="open-gift-btn" id="openGiftBtn">
+      <p class="intro-hint">Bu sahifa faqat sen uchun, cheksiz muhabbat va samimiy tilaklar bilan yaratildi...</p>
+      <button class="open-gift-btn" id="openGiftBtn" type="button">
         <span>Sovg'ani ochish 🎁</span>
       </button>
       <p class="intro-dua">اللّهمّ بارك • Allohim baraka ber</p>
@@ -71,7 +70,7 @@
       </p>
 
       <div class="timer-box glass-card">
-        <div class="timer-title">☪️ Alloh bergan ne'mat: 6 yillik mehr va sadoqat</div>
+        <div class="timer-title">Alloh bergan ne'mat: 6 yillik mehr va sadoqat</div>
         <div class="timer-grid">
           <div class="timer-item">
             <span class="timer-number">6</span>
@@ -103,7 +102,7 @@
     ═══════════════════════════════════════════════ -->
     <section class="letter-section">
       <div class="glass-card letter-card">
-        <div class="wax-seal">☪️</div>
+        <div class="wax-seal">🤍</div>
         <h2 class="section-title">Alloh Uchun Bo'lgan Sevgi Maktubi</h2>
         <div class="letter-body">
           <p class="letter-para">
@@ -119,7 +118,7 @@
           </p>
 
           <div class="love-quote islamic-quote">
-            <span class="hadith-mark">☪️</span>
+            <span class="hadith-mark">✨</span>
             «Rasululloh ﷺ aytdilar: "Alloh uchun sevgan, Alloh uchun adovat qilgan kishi imonini komil qilgan."»
             <span class="hadith-ref">— Abu Dovud rivoyati</span>
           </div>
@@ -142,7 +141,7 @@
           <p class="letter-para">
             Rostini aytsam, bu dunyoda meni eng ko'p qo'rqitadigan narsa — <strong>seni yo'qotish</strong>dir. 
             Bu qo'rquv shunchalik kuchli-ki, har duo qilganimda Allohdan seni muhofaza qilishni iltijo qilaman. 
-            Sen mening qalbimdagi eng qimmatli omontimsan, Zahrotiyyim.
+            Sen mening qalbimdagi eng qimmatli omonatimsan, Zahrotiyyim.
           </p>
 
           <div class="love-quote islamic-quote">
@@ -159,11 +158,11 @@
     </section>
 
     <!-- ═══════════════════════════════════════════════
-         PHOTO GALLERY — Rasmlar va Islomiy Statuslar
+         PHOTO GALLERY — Rasmlar va Statuslar
     ═══════════════════════════════════════════════ -->
     <section class="gallery-section">
       <div class="section-header">
-        <span class="section-badge">☪️ Alloh Bergan Ne'matlar</span>
+        <span class="section-badge">Alloh Bergan Ne'matlar</span>
         <h2 class="section-title">Har Bir Lahzangda Allohga Shukr</h2>
         <p class="section-desc">Alloh seni go'zal qilib yaratdi — bu suratlar o'sha go'zallikning isboti...</p>
       </div>
@@ -175,7 +174,7 @@
           <div class="card-image-wrap">
             <img src="images/photo1.jpg" alt="Zahrotiyyim" />
             <div class="image-overlay">
-              <span class="heart-pulse">☪️</span>
+              <span class="heart-pulse">🤍</span>
             </div>
           </div>
           <div class="card-content">
@@ -228,7 +227,7 @@
             <p class="card-status">
               "Ilm o'rganayotgan lahzalaring — sening eng go'zal lahzalaring. Alloh sening ilmingga 
               baraka bersin, yo'lingni nurlantirsin. Bu tabassumingni ko'rib, Yaratganga ming shukr aytaman. 
-              Seni yo'qotishdan qo'rqaman — chunki sen mening butun hayotim mazmuniisan."
+              Seni yo'qotishdan qo'rqaman — chunki sen mening butun hayotim mazmunisan."
             </p>
             <div class="card-dua">
               <span class="dua-arabic">رَبِّ زِدْنِي عِلْمًا</span>
@@ -245,7 +244,7 @@
     ═══════════════════════════════════════════════ -->
     <section class="surprise-section">
       <div class="glass-card surprise-box">
-        <h2 class="surprise-title">☪️ Zahrotiyyim Uchun Duolar Sandiqchasi</h2>
+        <h2 class="surprise-title">Zahrotiyyim Uchun Duolar Sandiqchasi ✨</h2>
         <p class="surprise-sub">Har bir tugma bosishda — chin qalbdan chiqqan duo va tilak:</p>
         
         <div class="wish-display" id="wishDisplay">
@@ -253,10 +252,10 @@
         </div>
 
         <div class="btn-group">
-          <button class="action-btn wish-btn" id="newWishBtn">
+          <button class="action-btn wish-btn" id="newWishBtn" type="button">
             Yangi duo olish 📿
           </button>
-          <button class="action-btn confetti-btn" id="confettiBtn">
+          <button class="action-btn confetti-btn" id="confettiBtn" type="button">
             Tabriknoma otish 🎆
           </button>
         </div>
@@ -271,7 +270,7 @@
         <p class="arabic-text large-arabic">وَقُل رَّبِّ ارْحَمْهُمَا كَمَا رَبَّيَانِي صَغِيرًا</p>
         <p class="verse-translation">«Rabbim, ularni (ota-onamni) shafqat bilan parvarish qilginki, ular meni bolaligimda tarbiya qilganlar.»</p>
         <p class="verse-ref">— Isro surasi, 24-oyat</p>
-        <p class="closing-wish">Alloh seni doimo sog'-salomat saqlasn, yuzingdan tabassum arimas va barcha orzularing amalga oshsin. Omin! 🤍</p>
+        <p class="closing-wish">Alloh seni doimo sog'-salomat saqlasin, yuzingdan tabassum arimasin va barcha orzularing amalga oshsin. Omin! 🤍</p>
       </div>
     </section>
 
@@ -281,7 +280,7 @@
       <p class="footer-note">
         Alloh rizosi uchun, <strong>Zahrotiyyim</strong>ga mehr va duo bilan yaratildi 🤍
       </p>
-      <p class="footer-sub">14.10.2026 • ☪️ 6 yillik halol muhabbat ramzi</p>
+      <p class="footer-sub">14.10.2026 • 6 yillik samimiy muhabbat ramzi</p>
     </footer>
 
   </main>
