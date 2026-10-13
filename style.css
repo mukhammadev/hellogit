@@ -1,28 +1,28 @@
 /* ========================================================
-   FOR YOU ZAHROTIY 🤍 — ULTRA REFINED ISLAMIC AESTHETIC
-   Elegance, Luxury, Poetic Motion & Velvet Ambient Lighting
+   FOR YOU ZAHROTIY 🩵 — LIGHT SKY BLUE & ICE CYAN LUXURY
+   Soft Cyan, Pastel Blue Glow, Glassmorphism, Velvet Dark Cyan
 ======================================================== */
 
 :root {
-  --primary-gold: #e5c378;
-  --gold-glow: #f9e2af;
-  --gold-subtle: rgba(229, 195, 120, 0.25);
-  --deep-emerald: #0b1d16;
-  --emerald-accent: #2e7d5e;
-  --emerald-light: #52b788;
+  --primary-blue: #70d6ff;
+  --soft-cyan: #99e2b4;
+  --ice-blue: #cbf3f0;
+  --crystal-glow: #e0fbfc;
+  --cyan-subtle: rgba(112, 214, 255, 0.22);
+  --cyan-glow: rgba(112, 214, 255, 0.45);
   
-  --bg-dark: #070e0b;
-  --bg-gradient: radial-gradient(ellipse at 50% 0%, #11281e 0%, #08130e 50%, #030705 100%);
+  --deep-bg: #050e14;
+  --bg-gradient: radial-gradient(ellipse at 50% 0%, #0c2331 0%, #071720 50%, #03080c 100%);
   
-  --glass-surface: rgba(14, 28, 22, 0.58);
-  --glass-surface-hover: rgba(20, 38, 30, 0.75);
-  --glass-border: rgba(229, 195, 120, 0.22);
-  --glass-border-glow: rgba(229, 195, 120, 0.5);
-  --glass-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  --glass-surface: rgba(12, 29, 39, 0.62);
+  --glass-surface-hover: rgba(18, 41, 55, 0.78);
+  --glass-border: rgba(112, 214, 255, 0.25);
+  --glass-border-glow: rgba(112, 214, 255, 0.55);
+  --glass-shadow: 0 16px 40px rgba(0, 0, 0, 0.65), inset 0 1px 0 rgba(255, 255, 255, 0.12);
   
   --text-pure: #ffffff;
-  --text-soft: #e2ede7;
-  --text-muted: #9bb7aa;
+  --text-soft: #e2f3fa;
+  --text-muted: #9cc1d4;
   
   --font-serif: 'Playfair Display', Georgia, serif;
   --font-arabic: 'Scheherazade New', 'Amiri', serif;
@@ -43,7 +43,7 @@ html {
 
 body {
   font-family: var(--font-sans);
-  background: var(--bg-dark);
+  background: var(--deep-bg);
   background-image: var(--bg-gradient);
   background-attachment: fixed;
   color: var(--text-pure);
@@ -54,32 +54,32 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Subtle glowing light orbs in the background */
+/* Ambient light sky blue orbs in the background */
 body::before,
 body::after {
   content: '';
   position: fixed;
   border-radius: 50%;
-  filter: blur(120px);
+  filter: blur(130px);
   pointer-events: none;
   z-index: 0;
-  opacity: 0.35;
+  opacity: 0.38;
 }
 
 body::before {
-  top: -15%;
+  top: -10%;
   left: 20%;
-  width: 550px;
-  height: 550px;
-  background: radial-gradient(circle, #2e7d5e 0%, transparent 70%);
+  width: 580px;
+  height: 580px;
+  background: radial-gradient(circle, #70d6ff 0%, transparent 70%);
 }
 
 body::after {
-  bottom: 5%;
+  bottom: 8%;
   right: 15%;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(229, 195, 120, 0.25) 0%, transparent 70%);
+  width: 620px;
+  height: 620px;
+  background: radial-gradient(circle, rgba(160, 231, 229, 0.3) 0%, transparent 70%);
 }
 
 /* Canvas Background */
@@ -92,7 +92,7 @@ body::after {
   z-index: 1;
 }
 
-/* Ultra fine luxury border lines */
+/* Sky blue borders */
 .islamic-pattern-top,
 .islamic-pattern-bottom {
   position: fixed;
@@ -103,18 +103,18 @@ body::after {
   pointer-events: none;
   background: linear-gradient(90deg, 
     transparent 0%, 
-    var(--emerald-light) 25%, 
-    var(--primary-gold) 50%, 
-    var(--emerald-light) 75%, 
+    rgba(112, 214, 255, 0.4) 25%, 
+    #70d6ff 50%, 
+    rgba(112, 214, 255, 0.4) 75%, 
     transparent 100%
   );
-  opacity: 0.6;
+  opacity: 0.7;
 }
 
 .islamic-pattern-top { top: 0; }
 .islamic-pattern-bottom { bottom: 0; }
 
-/* Luxury Glassmorphism Card */
+/* Luxury Sky Blue Glassmorphism Card */
 .glass-card {
   background: var(--glass-surface);
   backdrop-filter: blur(20px);
@@ -137,7 +137,7 @@ body::after {
   background: linear-gradient(
     90deg,
     transparent 0%,
-    rgba(255, 255, 255, 0.04) 50%,
+    rgba(112, 214, 255, 0.06) 50%,
     transparent 100%
   );
   pointer-events: none;
@@ -148,16 +148,16 @@ body::after {
   left: 100%;
 }
 
-/* Music Pill Indicator */
+/* Music Pill */
 .music-toggle {
   position: fixed;
   top: 24px;
   right: 28px;
   z-index: 100;
-  background: rgba(14, 28, 22, 0.65);
+  background: rgba(12, 29, 39, 0.7);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(229, 195, 120, 0.35);
+  border: 1px solid rgba(112, 214, 255, 0.4);
   padding: 10px 22px;
   border-radius: 50px;
   cursor: pointer;
@@ -174,14 +174,14 @@ body::after {
 
 .music-toggle:hover {
   transform: translateY(-2px);
-  border-color: var(--primary-gold);
-  background: rgba(20, 42, 33, 0.85);
-  box-shadow: 0 8px 25px rgba(229, 195, 120, 0.25);
+  border-color: var(--primary-blue);
+  background: rgba(18, 41, 55, 0.85);
+  box-shadow: 0 8px 25px rgba(112, 214, 255, 0.3);
 }
 
 .music-toggle.playing .music-icon {
   animation: pulseRotate 4s linear infinite;
-  filter: drop-shadow(0 0 6px var(--primary-gold));
+  filter: drop-shadow(0 0 6px var(--primary-blue));
 }
 
 @keyframes pulseRotate {
@@ -191,12 +191,12 @@ body::after {
 }
 
 /* ========================================================
-   INTRO OVERLAY (Ethereal Opening)
+   INTRO OVERLAY
 ======================================================== */
 .intro-overlay {
   position: fixed;
   inset: 0;
-  background: radial-gradient(circle at center, #0f241a 0%, #030705 100%);
+  background: radial-gradient(circle at center, #0c2331 0%, #03080c 100%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -214,14 +214,14 @@ body::after {
 .intro-card {
   max-width: 580px;
   width: 100%;
-  background: rgba(13, 26, 20, 0.82);
+  background: rgba(12, 29, 39, 0.85);
   backdrop-filter: blur(28px);
   -webkit-backdrop-filter: blur(28px);
-  border: 1px solid rgba(229, 195, 120, 0.4);
+  border: 1px solid rgba(112, 214, 255, 0.45);
   box-shadow: 
     0 24px 60px rgba(0, 0, 0, 0.8),
-    0 0 80px rgba(82, 183, 136, 0.15),
-    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    0 0 80px rgba(112, 214, 255, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18);
   border-radius: 34px;
   padding: 56px 36px;
   text-align: center;
@@ -237,8 +237,8 @@ body::after {
 .bismillah-arabic {
   font-family: var(--font-arabic);
   font-size: 2.3rem;
-  color: var(--primary-gold);
-  text-shadow: 0 0 25px rgba(229, 195, 120, 0.45);
+  color: var(--primary-blue);
+  text-shadow: 0 0 25px rgba(112, 214, 255, 0.5);
   margin-bottom: 18px;
   direction: rtl;
   letter-spacing: 1px;
@@ -255,20 +255,11 @@ body::after {
   to { transform: translateY(-7px); }
 }
 
-.intro-subtitle {
-  font-size: 0.85rem;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-  color: var(--emerald-light);
-  font-weight: 500;
-  margin-bottom: 10px;
-}
-
 .intro-title {
   font-family: var(--font-script);
   font-size: 4.4rem;
   color: #fff;
-  text-shadow: 0 0 30px rgba(229, 195, 120, 0.5);
+  text-shadow: 0 0 30px rgba(112, 214, 255, 0.6);
   margin-bottom: 16px;
   line-height: 1.1;
 }
@@ -281,7 +272,7 @@ body::after {
 }
 
 .open-gift-btn {
-  background: linear-gradient(135deg, #e5c378 0%, #2e7d5e 100%);
+  background: linear-gradient(135deg, #70d6ff 0%, #0096c7 100%);
   border: none;
   color: #fff;
   padding: 16px 42px;
@@ -290,7 +281,7 @@ body::after {
   letter-spacing: 0.5px;
   border-radius: 50px;
   cursor: pointer;
-  box-shadow: 0 10px 30px rgba(229, 195, 120, 0.35);
+  box-shadow: 0 10px 30px rgba(112, 214, 255, 0.45);
   transition: all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
   position: relative;
   overflow: hidden;
@@ -298,14 +289,14 @@ body::after {
 
 .open-gift-btn:hover {
   transform: translateY(-3px) scale(1.03);
-  box-shadow: 0 16px 40px rgba(82, 183, 136, 0.5);
+  box-shadow: 0 16px 40px rgba(112, 214, 255, 0.65);
 }
 
 .intro-dua {
   margin-top: 24px;
   font-family: var(--font-arabic);
   font-size: 1.1rem;
-  color: var(--primary-gold);
+  color: var(--primary-blue);
   opacity: 0.85;
 }
 
@@ -326,16 +317,16 @@ body::after {
   margin: 0 auto 50px;
   padding: 40px 36px;
   text-align: center;
-  border: 1px solid rgba(229, 195, 120, 0.28);
-  background: rgba(14, 30, 22, 0.45);
+  border: 1px solid rgba(112, 214, 255, 0.3);
+  background: rgba(12, 29, 39, 0.5);
 }
 
 .arabic-text {
   font-family: var(--font-arabic);
   font-size: 2rem;
-  color: var(--primary-gold);
+  color: var(--primary-blue);
   direction: rtl;
-  text-shadow: 0 0 20px rgba(229, 195, 120, 0.3);
+  text-shadow: 0 0 20px rgba(112, 214, 255, 0.35);
   line-height: 2.1;
   margin-bottom: 16px;
 }
@@ -357,7 +348,7 @@ body::after {
 .verse-ref {
   font-size: 0.85rem;
   letter-spacing: 1.5px;
-  color: var(--emerald-light);
+  color: var(--primary-blue);
   font-weight: 600;
   text-transform: uppercase;
 }
@@ -375,9 +366,9 @@ body::after {
 
 .floating-badge {
   display: inline-block;
-  background: rgba(82, 183, 136, 0.12);
-  border: 1px solid rgba(82, 183, 136, 0.35);
-  color: var(--emerald-light);
+  background: rgba(112, 214, 255, 0.12);
+  border: 1px solid rgba(112, 214, 255, 0.4);
+  color: var(--primary-blue);
   padding: 8px 26px;
   border-radius: 50px;
   font-size: 0.82rem;
@@ -385,7 +376,7 @@ body::after {
   letter-spacing: 2px;
   text-transform: uppercase;
   margin-bottom: 26px;
-  box-shadow: 0 0 20px rgba(82, 183, 136, 0.15);
+  box-shadow: 0 0 20px rgba(112, 214, 255, 0.2);
 }
 
 .hero-greeting {
@@ -402,10 +393,10 @@ body::after {
   font-family: var(--font-script);
   font-size: 5.5rem;
   display: block;
-  background: linear-gradient(135deg, #ffffff 0%, #e5c378 50%, #52b788 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #70d6ff 50%, #00b4d8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0 0 30px rgba(229, 195, 120, 0.45));
+  filter: drop-shadow(0 0 30px rgba(112, 214, 255, 0.55));
   margin-top: 8px;
   font-weight: normal;
 }
@@ -427,14 +418,14 @@ body::after {
   max-width: 760px;
   width: 100%;
   margin-bottom: 44px;
-  border: 1px solid rgba(229, 195, 120, 0.2);
+  border: 1px solid rgba(112, 214, 255, 0.25);
 }
 
 .timer-title {
   font-size: 0.88rem;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: var(--primary-gold);
+  color: var(--primary-blue);
   margin-bottom: 22px;
   font-weight: 600;
 }
@@ -452,13 +443,13 @@ body::after {
   background: rgba(255, 255, 255, 0.03);
   border-radius: 18px;
   padding: 16px 12px;
-  border: 1px solid rgba(229, 195, 120, 0.12);
+  border: 1px solid rgba(112, 214, 255, 0.15);
   transition: all 0.3s ease;
 }
 
 .timer-item:hover {
   transform: translateY(-2px);
-  border-color: rgba(229, 195, 120, 0.3);
+  border-color: rgba(112, 214, 255, 0.35);
   background: rgba(255, 255, 255, 0.05);
 }
 
@@ -467,7 +458,7 @@ body::after {
   font-weight: 700;
   color: #fff;
   font-family: var(--font-serif);
-  text-shadow: 0 0 18px rgba(229, 195, 120, 0.4);
+  text-shadow: 0 0 18px rgba(112, 214, 255, 0.5);
 }
 
 .timer-label {
@@ -500,7 +491,7 @@ body::after {
 .mouse-icon {
   width: 22px;
   height: 34px;
-  border: 1.5px solid rgba(229, 195, 120, 0.4);
+  border: 1.5px solid rgba(112, 214, 255, 0.4);
   border-radius: 20px;
   position: relative;
 }
@@ -513,7 +504,7 @@ body::after {
   transform: translateX(-50%);
   width: 3px;
   height: 6px;
-  background: var(--primary-gold);
+  background: var(--primary-blue);
   border-radius: 2px;
   animation: scrollWheel 1.6s infinite;
 }
@@ -524,7 +515,7 @@ body::after {
 }
 
 /* ========================================================
-   LETTER SECTION (Poetic & Intimate)
+   LETTER SECTION
 ======================================================== */
 .letter-section {
   padding: 90px 10px;
@@ -535,8 +526,8 @@ body::after {
   margin: 0 auto;
   padding: 68px 54px;
   position: relative;
-  border: 1px solid rgba(229, 195, 120, 0.28);
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.7), inset 0 0 50px rgba(82, 183, 136, 0.04);
+  border: 1px solid rgba(112, 214, 255, 0.32);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.7), inset 0 0 50px rgba(112, 214, 255, 0.05);
 }
 
 .wax-seal {
@@ -546,13 +537,13 @@ body::after {
   transform: translateX(-50%);
   width: 60px;
   height: 60px;
-  background: radial-gradient(circle, #e5c378 0%, #1e4a36 100%);
+  background: radial-gradient(circle, #70d6ff 0%, #0077b6 100%);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.8rem;
-  box-shadow: 0 6px 25px rgba(229, 195, 120, 0.45);
+  box-shadow: 0 6px 25px rgba(112, 214, 255, 0.5);
   border: 2px solid rgba(255, 255, 255, 0.7);
 }
 
@@ -562,7 +553,7 @@ body::after {
   text-align: center;
   margin-bottom: 40px;
   color: #fff;
-  text-shadow: 0 2px 25px rgba(229, 195, 120, 0.3);
+  text-shadow: 0 2px 25px rgba(112, 214, 255, 0.4);
   font-weight: 600;
 }
 
@@ -582,14 +573,14 @@ body::after {
   font-family: var(--font-serif);
   font-style: italic;
   font-size: 1.18rem;
-  color: #f1f8f4;
-  border-left: 3px solid var(--primary-gold);
+  color: #f1f8fc;
+  border-left: 3px solid var(--primary-blue);
   padding: 20px 28px;
   margin: 32px 0;
-  background: rgba(229, 195, 120, 0.05);
+  background: rgba(112, 214, 255, 0.06);
   border-radius: 0 20px 20px 0;
   text-indent: 0;
-  box-shadow: inset 1px 0 0 rgba(229, 195, 120, 0.2);
+  box-shadow: inset 1px 0 0 rgba(112, 214, 255, 0.2);
 }
 
 .hadith-mark {
@@ -601,7 +592,7 @@ body::after {
   display: block;
   margin-top: 10px;
   font-size: 0.85rem;
-  color: var(--primary-gold);
+  color: var(--primary-blue);
   font-style: normal;
   font-weight: 600;
   letter-spacing: 0.5px;
@@ -617,14 +608,14 @@ body::after {
 .signature {
   font-family: var(--font-hand);
   font-size: 2.4rem;
-  color: var(--primary-gold);
+  color: var(--primary-blue);
   display: inline-block;
   margin-top: 10px;
-  text-shadow: 0 0 15px rgba(229, 195, 120, 0.4);
+  text-shadow: 0 0 15px rgba(112, 214, 255, 0.5);
 }
 
 /* ========================================================
-   GALLERY SECTION (Refined Card Architecture)
+   GALLERY SECTION
 ======================================================== */
 .gallery-section {
   padding: 90px 10px;
@@ -640,7 +631,7 @@ body::after {
   font-size: 0.82rem;
   letter-spacing: 2.5px;
   text-transform: uppercase;
-  color: var(--primary-gold);
+  color: var(--primary-blue);
   margin-bottom: 12px;
   font-weight: 600;
 }
@@ -661,7 +652,7 @@ body::after {
 .gallery-card {
   overflow: hidden;
   transition: all 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
-  border: 1px solid rgba(229, 195, 120, 0.18);
+  border: 1px solid rgba(112, 214, 255, 0.2);
   display: flex;
   flex-direction: column;
 }
@@ -670,8 +661,8 @@ body::after {
   transform: translateY(-8px);
   box-shadow: 
     0 24px 50px rgba(0, 0, 0, 0.7),
-    0 0 35px rgba(229, 195, 120, 0.18);
-  border-color: rgba(229, 195, 120, 0.45);
+    0 0 35px rgba(112, 214, 255, 0.25);
+  border-color: rgba(112, 214, 255, 0.5);
 }
 
 .card-image-wrap {
@@ -699,8 +690,8 @@ body::after {
   inset: 0;
   background: linear-gradient(
     to top, 
-    rgba(7, 14, 11, 0.95) 0%, 
-    rgba(7, 14, 11, 0.4) 40%, 
+    rgba(5, 14, 20, 0.95) 0%, 
+    rgba(5, 14, 20, 0.4) 40%, 
     transparent 100%
   );
   display: flex;
@@ -711,7 +702,7 @@ body::after {
 
 .heart-pulse {
   font-size: 1.8rem;
-  filter: drop-shadow(0 0 10px rgba(229, 195, 120, 0.6));
+  filter: drop-shadow(0 0 10px rgba(112, 214, 255, 0.7));
   animation: pulseGentle 2.2s infinite;
 }
 
@@ -730,7 +721,7 @@ body::after {
 .card-tag {
   font-size: 0.78rem;
   letter-spacing: 2px;
-  color: var(--emerald-light);
+  color: var(--primary-blue);
   font-weight: 600;
   text-transform: uppercase;
   margin-bottom: 8px;
@@ -757,25 +748,25 @@ body::after {
 .card-dua {
   margin-top: auto;
   padding: 16px 20px;
-  background: rgba(229, 195, 120, 0.04);
-  border: 1px solid rgba(229, 195, 120, 0.16);
+  background: rgba(112, 214, 255, 0.05);
+  border: 1px solid rgba(112, 214, 255, 0.2);
   border-radius: 16px;
   text-align: center;
   transition: all 0.3s ease;
 }
 
 .gallery-card:hover .card-dua {
-  background: rgba(229, 195, 120, 0.08);
-  border-color: rgba(229, 195, 120, 0.28);
+  background: rgba(112, 214, 255, 0.1);
+  border-color: rgba(112, 214, 255, 0.35);
 }
 
 .dua-arabic {
   font-family: var(--font-arabic);
   font-size: 1.4rem;
-  color: var(--primary-gold);
+  color: var(--primary-blue);
   direction: rtl;
   display: block;
-  text-shadow: 0 0 12px rgba(229, 195, 120, 0.3);
+  text-shadow: 0 0 12px rgba(112, 214, 255, 0.4);
   margin-bottom: 6px;
 }
 
@@ -797,7 +788,7 @@ body::after {
   margin: 0 auto;
   padding: 54px 40px;
   text-align: center;
-  border: 1px solid rgba(229, 195, 120, 0.25);
+  border: 1px solid rgba(112, 214, 255, 0.3);
 }
 
 .surprise-title {
@@ -824,9 +815,9 @@ body::after {
   padding: 24px;
   background: rgba(255, 255, 255, 0.02);
   border-radius: 22px;
-  border: 1px dashed rgba(229, 195, 120, 0.35);
+  border: 1px dashed rgba(112, 214, 255, 0.4);
   color: #ffffff;
-  text-shadow: 0 0 20px rgba(229, 195, 120, 0.35);
+  text-shadow: 0 0 20px rgba(112, 214, 255, 0.45);
   margin-bottom: 32px;
   transition: opacity 0.3s ease, transform 0.3s ease;
   line-height: 1.5;
@@ -851,26 +842,26 @@ body::after {
 }
 
 .wish-btn {
-  background: linear-gradient(135deg, #2e7d5e, #52b788);
+  background: linear-gradient(135deg, #0077b6, #00b4d8);
   color: #fff;
-  box-shadow: 0 8px 24px rgba(46, 125, 94, 0.35);
+  box-shadow: 0 8px 24px rgba(0, 180, 216, 0.35);
 }
 
 .wish-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 30px rgba(82, 183, 136, 0.5);
+  box-shadow: 0 12px 30px rgba(0, 180, 216, 0.55);
 }
 
 .confetti-btn {
-  background: linear-gradient(135deg, #e5c378, #d4a017);
-  color: #0b1d16;
+  background: linear-gradient(135deg, #70d6ff, #90e0ef);
+  color: #050e14;
   font-weight: 700;
-  box-shadow: 0 8px 24px rgba(229, 195, 120, 0.35);
+  box-shadow: 0 8px 24px rgba(112, 214, 255, 0.4);
 }
 
 .confetti-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 30px rgba(229, 195, 120, 0.55);
+  box-shadow: 0 12px 30px rgba(112, 214, 255, 0.6);
 }
 
 /* ========================================================
@@ -885,8 +876,8 @@ body::after {
   margin: 0 auto;
   padding: 52px 40px;
   text-align: center;
-  border: 1px solid rgba(229, 195, 120, 0.22);
-  background: rgba(14, 30, 22, 0.4);
+  border: 1px solid rgba(112, 214, 255, 0.25);
+  background: rgba(12, 29, 39, 0.45);
 }
 
 .closing-wish {
@@ -904,17 +895,17 @@ body::after {
 .page-footer {
   text-align: center;
   padding: 50px 20px 30px;
-  border-top: 1px solid rgba(229, 195, 120, 0.12);
+  border-top: 1px solid rgba(112, 214, 255, 0.15);
   margin-top: 50px;
 }
 
 .footer-bismillah {
   font-family: var(--font-arabic);
   font-size: 1.9rem;
-  color: var(--primary-gold);
+  color: var(--primary-blue);
   margin-bottom: 12px;
   direction: rtl;
-  opacity: 0.75;
+  opacity: 0.8;
 }
 
 .footer-note {
@@ -923,7 +914,7 @@ body::after {
 }
 
 .footer-note strong {
-  color: var(--primary-gold);
+  color: var(--primary-blue);
   font-weight: 600;
 }
 
@@ -935,7 +926,7 @@ body::after {
 }
 
 /* ========================================================
-   RESPONSIVE DESIGN (Mobile Perfection)
+   RESPONSIVE
 ======================================================== */
 @media (max-width: 768px) {
   .hero-greeting {

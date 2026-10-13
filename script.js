@@ -36,12 +36,12 @@ document.addEventListener('DOMContentLoaded', () => {
         particleCount: 90,
         spread: 80,
         origin: { y: 0.6 },
-        colors: ['#e5c378', '#52b788', '#ffffff', '#f9e2af', '#2e7d5e'],
+        colors: ['#70d6ff', '#00b4d8', '#ffffff', '#e0fbfc', '#90e0ef'],
         ticks: 250,
         gravity: 0.8
       });
 
-      // Side golden showers
+      // Side sky blue showers
       const end = Date.now() + 1400;
       const interval = setInterval(function() {
         if (Date.now() > end) return clearInterval(interval);
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
           spread: 360,
           ticks: 80,
           origin: { x: Math.random(), y: Math.random() - 0.2 },
-          colors: ['#e5c378', '#f9e2af', '#ffffff', '#52b788']
+          colors: ['#70d6ff', '#ffffff', '#00b4d8', '#caf0f8']
         });
       }, 240);
     }
@@ -168,9 +168,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const rand = Math.random();
         if (rand > 0.6) {
-          this.color = '229, 195, 120'; // Warm gold
+          this.color = '112, 214, 255'; // Sky Blue 🩵
         } else if (rand > 0.3) {
-          this.color = '82, 183, 136';  // Soft emerald
+          this.color = '160, 231, 229';  // Soft Ice Cyan
         } else {
           this.color = '255, 255, 255';  // White star
         }
