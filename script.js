@@ -56,30 +56,42 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Open Gift Handler
-  if (openGiftBtn && introOverlay) {
-    const handleOpenGift = (e) => {
-      if (e) e.preventDefault();
-      introOverlay.classList.add('hide');
-      triggerIslamicConfetti();
-      playMusic();
-    };
-
-    openGiftBtn.addEventListener('click', handleOpenGift);
-    openGiftBtn.addEventListener('touchstart', handleOpenGift, { passive: false });
-  }
-
-  // Music Playback
+  // Music Playback Helper
   let isPlaying = false;
 
   function playMusic() {
     if (!bgMusic) return;
-    bgMusic.play().then(() => {
-      isPlaying = true;
-      if (musicToggle) musicToggle.classList.add('playing');
-    }).catch(err => {
-      console.log('Audio playback notice:', err);
-    });
+    
+    // Explicitly load if not ready
+    if (bgMusic.readyState === 0) {
+      bgMusic.load();
+    }
+
+    const playPromise = bgMusic.play();
+    if (playPromise !== undefined) {
+      playPromise.then(() => {
+        isPlaying = true;
+        if (musicToggle) musicToggle.classList.add('playing');
+      }).catch(err => {
+        console.log('Mobile audio autoplay notice:', err);
+      });
+    }
+  }
+
+  // Open Gift Handler (Direct user gesture for iOS & Android)
+  if (openGiftBtn && introOverlay) {
+    const handleOpenGift = () => {
+      // 1. Play audio immediately synchronously in user gesture
+      playMusic();
+
+      // 2. Hide intro card
+      introOverlay.classList.add('hide');
+
+      // 3. Trigger confetti
+      triggerIslamicConfetti();
+    };
+
+    openGiftBtn.addEventListener('click', handleOpenGift);
   }
 
   if (musicToggle) {
