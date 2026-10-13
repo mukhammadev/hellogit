@@ -1,6 +1,6 @@
 /* ========================================================
-   FOR YOU ZAHROTIY 🤍 — ISLAMIC JAVASCRIPT
-   Floating crescents & stars, Islamic duas, confetti
+   FOR YOU ZAHROTIY 🤍 — JAVASCRIPT
+   Smooth ambient sparkles, elegant golden petals, audio control
 ======================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -13,43 +13,46 @@ document.addEventListener('DOMContentLoaded', () => {
   const confettiBtn = document.getElementById('confettiBtn');
   const bgCanvas = document.getElementById('bg-canvas');
 
-  // Islamic Wishes & Duas
+  // Poetic Islamic Wishes & Duas
   const islamicWishes = [
     "«Yo Alloh, Zahrotiyyimni har yomonlikdan asra va uni doimo baxtli qil! Omin 🤍»",
     "«Seni Alloh uchun sevaman — bu sevgi eng pok va eng abadiy sevgidir ☪️»",
-    "«Yo Rabbiy, uni meni uchun nasib qil va meni uning uchun nasib qil! Omin»",
-    "«Alloh sening tabassumingni hech aritmsin, yuzingni doimo nurli saqlasn 🤍»",
-    "«6 yildan beri har sajdamda seni Allohdan so'rayman... Omin yo Robbiy!»",
-    "«Alloh ikkalamizni Jannatda ham birga qilsin — bu mening eng katta orzuim ☪️»",
-    "«Rasululloh ﷺ aytdilar: Seni Alloh uchun sevdim — bu eng ulug' sevgidir 🤍»",
-    "«Yo Alloh, Zahroga uzun umr, barakali hayot va cheksiz baxt nasib qil! Omin»",
-    "«Sening hijobingdagi hayolaring, ilm yo'lidagi sabring — meni Yaratganga shukrga undaydi ✨»",
-    "«Allohim, seni menga ato qilgani uchun ming bor shukr! Tug'ilgan kuning muborak, Zahrotiyyim 🤍»"
+    "«Yo Rabbiy, uni mening qalbimga, meni uning qalbiga xayrli juft et! Omin»",
+    "«Alloh sening tabassumingni hech arimasin, yuzingni doimo nurli saqlasin 🤍»",
+    "«6 yildan beri har bir sajdamda seni Allohdan so'rayman... Omin yo Robbiy!»",
+    "«Alloh ikkalamizni dunyoda ham, oxiratda ham birga qilsin — mening oliy niyatim ☪️»",
+    "«Rasululloh ﷺ: "Alloh uchun sevish — imonning eng go'zal halovatidir" 🤍»",
+    "«Yo Alloh, Zahroga uzun umr, barakali hayot va cheksiz tinchlik ato et! Omin»",
+    "«Sening hijobingdagi hayolaring va sabring — meni har kun Yaratganga shukr qilishga undaydi ✨»",
+    "«Allohim, seni menga eng go'zal ne'mat qilib bergani uchun ming bor shukr! 🤍»"
   ];
 
   let currentWishIndex = 0;
 
-  // Confetti — emerald & gold themed
+  // Ultra Elegant Luxury Confetti
   function triggerIslamicConfetti() {
     if (typeof confetti === 'function') {
       confetti({
-        particleCount: 80,
-        spread: 70,
+        particleCount: 90,
+        spread: 80,
         origin: { y: 0.6 },
-        colors: ['#2ecc71', '#f4d03f', '#ffffff', '#27ae60', '#d4a017']
+        colors: ['#e5c378', '#52b788', '#ffffff', '#f9e2af', '#2e7d5e'],
+        ticks: 250,
+        gravity: 0.8
       });
 
-      const end = Date.now() + 1500;
+      // Side golden showers
+      const end = Date.now() + 1400;
       const interval = setInterval(function() {
         if (Date.now() > end) return clearInterval(interval);
         confetti({
-          startVelocity: 30,
+          startVelocity: 35,
           spread: 360,
-          ticks: 60,
+          ticks: 80,
           origin: { x: Math.random(), y: Math.random() - 0.2 },
-          colors: ['#2ecc71', '#f4d03f', '#ffffff', '#1a8a4a']
+          colors: ['#e5c378', '#f9e2af', '#ffffff', '#52b788']
         });
-      }, 250);
+      }, 240);
     }
   }
 
@@ -60,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
     playMusic();
   });
 
-  // Music
+  // Music Playback
   let isPlaying = false;
 
   function playMusic() {
@@ -68,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
       isPlaying = true;
       musicToggle.classList.add('playing');
     }).catch(err => {
-      console.log('Audio not loaded:', err);
+      console.log('Audio playback notice:', err);
     });
   }
 
@@ -82,21 +85,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Wishes
+  // Wishes Transition
   newWishBtn.addEventListener('click', () => {
     currentWishIndex = (currentWishIndex + 1) % islamicWishes.length;
-    wishDisplay.style.opacity = 0;
+    wishDisplay.style.opacity = '0';
+    wishDisplay.style.transform = 'translateY(10px)';
+    
     setTimeout(() => {
       wishDisplay.textContent = islamicWishes[currentWishIndex];
-      wishDisplay.style.opacity = 1;
-    }, 250);
+      wishDisplay.style.opacity = '1';
+      wishDisplay.style.transform = 'translateY(0)';
+    }, 280);
 
     if (typeof confetti === 'function') {
       confetti({
-        particleCount: 20,
-        spread: 40,
-        origin: { y: 0.8 },
-        colors: ['#2ecc71', '#f4d03f']
+        particleCount: 22,
+        spread: 45,
+        origin: { y: 0.82 },
+        colors: ['#e5c378', '#52b788', '#ffffff']
       });
     }
   });
@@ -105,9 +111,9 @@ document.addEventListener('DOMContentLoaded', () => {
     triggerIslamicConfetti();
   });
 
-  // ========================================
-  // Background Canvas — Floating ☪️ and ✨
-  // ========================================
+  // ========================================================
+  // Canvas: Soft Glowing Gold & Emerald Starlight Ambient
+  // ========================================================
   const ctx = bgCanvas.getContext('2d');
   let width = (bgCanvas.width = window.innerWidth);
   let height = (bgCanvas.height = window.innerHeight);
@@ -117,62 +123,72 @@ document.addEventListener('DOMContentLoaded', () => {
     height = bgCanvas.height = window.innerHeight;
   });
 
-  class IslamicParticle {
+  class EtherealOrb {
     constructor() {
       this.reset();
     }
 
     reset() {
       this.x = Math.random() * width;
-      this.y = height + Math.random() * 60;
-      this.size = Math.random() * 16 + 10;
-      this.speedY = Math.random() * 0.6 + 0.3;
-      this.speedX = (Math.random() - 0.5) * 0.4;
-      this.opacity = Math.random() * 0.5 + 0.15;
+      this.y = height + Math.random() * 50;
+      this.radius = Math.random() * 2.5 + 1.2;
+      this.speedY = Math.random() * 0.45 + 0.25;
+      this.speedX = (Math.random() - 0.5) * 0.3;
+      this.baseOpacity = Math.random() * 0.4 + 0.25;
+      this.opacity = this.baseOpacity;
+      this.pulseSpeed = Math.random() * 0.02 + 0.01;
+      this.pulse = Math.random() * Math.PI;
 
+      // Color scheme
       const rand = Math.random();
       if (rand > 0.6) {
-        this.symbol = '☪️';
-        this.color = '#2ecc71';
+        this.color = '229, 195, 120'; // Warm luxury gold
       } else if (rand > 0.3) {
-        this.symbol = '✨';
-        this.color = '#f4d03f';
+        this.color = '82, 183, 136';  // Soft emerald
       } else {
-        this.symbol = '🤍';
-        this.color = '#ffffff';
+        this.color = '255, 255, 255';  // Pure white star
       }
     }
 
     update() {
       this.y -= this.speedY;
       this.x += this.speedX;
-      if (this.y < -40) this.reset();
+      this.pulse += this.pulseSpeed;
+      this.opacity = this.baseOpacity + Math.sin(this.pulse) * 0.18;
+
+      if (this.y < -30) {
+        this.reset();
+      }
     }
 
     draw() {
       ctx.save();
-      ctx.globalAlpha = this.opacity;
-      ctx.font = `${this.size}px serif`;
-      ctx.fillText(this.symbol, this.x, this.y);
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(${this.color}, ${Math.max(0.1, this.opacity)})`;
+      ctx.shadowBlur = 12;
+      ctx.shadowColor = `rgba(${this.color}, 0.8)`;
+      ctx.fill();
       ctx.restore();
     }
   }
 
-  const particles = [];
-  for (let i = 0; i < 22; i++) {
-    const p = new IslamicParticle();
-    p.y = Math.random() * height;
-    particles.push(p);
+  const orbCount = 38;
+  const orbs = [];
+  for (let i = 0; i < orbCount; i++) {
+    const orb = new EtherealOrb();
+    orb.y = Math.random() * height; // evenly populate
+    orbs.push(orb);
   }
 
-  function animate() {
+  function renderAmbient() {
     ctx.clearRect(0, 0, width, height);
-    particles.forEach(p => {
-      p.update();
-      p.draw();
+    orbs.forEach(orb => {
+      orb.update();
+      orb.draw();
     });
-    requestAnimationFrame(animate);
+    requestAnimationFrame(renderAmbient);
   }
 
-  animate();
+  renderAmbient();
 });
