@@ -771,9 +771,20 @@ body::after {
 }
 
 .dua-meaning {
-  font-size: 0.82rem;
-  color: var(--text-muted);
+  font-size: 0.95rem;
+  color: var(--text-soft);
   font-style: italic;
+  display: block;
+  line-height: 1.6;
+}
+
+.dua-ref {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.82rem;
+  color: var(--primary-blue);
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
 /* ========================================================
